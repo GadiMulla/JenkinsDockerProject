@@ -1,31 +1,32 @@
 pipeline {
-    node("Gadi"){
+    agent any
 
-     echo "Jenkins pipeline for rapidx node"
-    
-        stages {
-            stage('Checkout') {
-                steps {
-                    checkout scm
-                }
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from the repository
+                checkout scm
             }
-            
-            stage('Build') {
-                steps {
-                    sh 'echo "Building the project"'
-                }
+        }
+        
+        stage('Build') {
+            steps {
+                // Your build steps go here
+                sh 'echo "Building the project"'
             }
-            
-            stage('Test') {
-                steps {
-                    sh 'echo "Running tests"'
-                }
+        }
+        
+        stage('Test') {
+            steps {
+                // Your testing steps go here
+                sh 'echo "Running tests"'
             }
-            
-            stage('Deploy') {
-                steps {
-                    sh 'echo "Deploying"'
-                }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Your deployment steps go here
+                sh 'echo "Deploying"'
             }
         }
     }
