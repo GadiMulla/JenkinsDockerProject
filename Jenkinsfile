@@ -1,30 +1,31 @@
 pipeline {
     node("Gadi"){
 
-    echo "Jenkins pipeline for rapidx node"
-
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
+     echo "Jenkins pipeline for rapidx node"
+    
+        stages {
+            stage('Checkout') {
+                steps {
+                    checkout scm
+                }
             }
-        }
-        
-        stage('Build') {
-            steps {
-                sh 'echo "Building the project"'
+            
+            stage('Build') {
+                steps {
+                    sh 'echo "Building the project"'
+                }
             }
-        }
-        
-        stage('Test') {
-            steps {
-                sh 'echo "Running tests"'
+            
+            stage('Test') {
+                steps {
+                    sh 'echo "Running tests"'
+                }
             }
-        }
-        
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying"'
+            
+            stage('Deploy') {
+                steps {
+                    sh 'echo "Deploying"'
+                }
             }
         }
     }
