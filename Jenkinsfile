@@ -1,5 +1,5 @@
 pipeline {
-    agent { gadi }
+    agent { Gadi }
     stages {
         stage('Checkout') {
             steps {
