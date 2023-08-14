@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    node("Gadi"){
+
+    echo "Jenkins pipeline for rapidx node"
+
     stages {
         stage('Checkout') {
             steps {
