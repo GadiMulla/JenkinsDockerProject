@@ -1,5 +1,5 @@
 pipeline {
-    agent agent { label 'gadi' }
+    agent agent gadi
     stages {
         stage('Checkout') {
             steps {
