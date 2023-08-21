@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     // Your deployment steps go here
-                    sh ./docker_check.sh
+                    sh docker_check.sh
                 }
          }
     }
