@@ -11,15 +11,17 @@ pipeline {
         
         stage('Build') {
             steps {
-                // Your build steps go here
-                sh 'echo "Building the project"'
+                script {
+                    sh 'echo "Building the project"'
+                    def dockerjenkinsproject = "dockerjenkinsproject"
+                        sh "docker build -t $dockerjenkinsproject ."
             }
         }
         
-        stage('Test') {
+        stage('Run Docker Container') {
             steps {
                 // Your testing steps go here
-                sh 'echo "Running tests"'
+                sh 'echo "Running Docker Container"'
             }
         }
         
