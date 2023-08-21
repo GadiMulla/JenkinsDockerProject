@@ -21,7 +21,7 @@ pipeline {
                 script {
                     sh 'echo "Running Docker Container"'
                     sh "docker run -d --name dockerjenkinsproject dockerjenkinsproject"
-                    sleep (20)
+                    sh './docker_sleep.sh'
             }
         }
     }
