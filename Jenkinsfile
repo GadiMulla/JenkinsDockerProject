@@ -31,7 +31,7 @@ pipeline {
                     // Your deployment steps go here
                     sh docker_check.sh
                 }
-         }
+             }
+        }
     }
-}
 }
