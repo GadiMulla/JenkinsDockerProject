@@ -28,10 +28,7 @@ pipeline {
         stage('Delete Container') {
             steps {
                 script {
-                    sh '''
-                    chmod 777 docker_check.sh
-                    ./docker_check.sh
-                    '''
+                    sh "docker rm dockerjenkinsproject"
                 }
              }
         }
