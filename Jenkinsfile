@@ -14,7 +14,7 @@ pipeline {
                 script {
                     sh 'echo "Building the project"'
                     def Dockerfile = "dockerjenkinsproject"
-                        sh "docker build -t $dockerjenkinsproject ."
+                    sh "docker build -t $dockerjenkinsproject ."
             }
         }
         
