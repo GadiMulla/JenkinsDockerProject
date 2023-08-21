@@ -11,8 +11,9 @@ pipeline {
         
         stage('Build') {
             steps {
-                    sh 'echo "Building the project"'
+                script {
                     sh "docker build -t dockerjenkinsproject ."
+            }
         }
         
         stage('Run Docker Container') {
@@ -23,14 +24,13 @@ pipeline {
                     sleep (20)
             }
         }
-        
+    }
         stage('Deploy') {
             steps {
                 // Your deployment steps go here
                 sh 'echo "Deploying"'
                 }
             }
-        }
     }
 }
 }
