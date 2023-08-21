@@ -11,10 +11,8 @@ pipeline {
         
         stage('Build') {
             steps {
-                script {
                     sh 'echo "Building the project"'
                     sh "docker build -t dockerjenkinsproject ."
-            }
         }
         
         stage('Run Docker Container') {
