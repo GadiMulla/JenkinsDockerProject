@@ -20,10 +20,10 @@ pipeline {
         
         stage('Run Docker Container') {
             steps {
-                // Your testing steps go here
-                sh 'echo "Running Docker Container"'
-                def containerId = sh(script: "docker run -d --name $dockerjenkinsproject $dockerjenkinsproject"
-                sleep (20)
+                script {
+                    sh 'echo "Running Docker Container"'
+                    def containerId = sh(script: "docker run -d --name $dockerjenkinsproject $dockerjenkinsproject")
+                    sleep (20)
             }
         }
         
