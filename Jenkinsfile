@@ -28,7 +28,7 @@ ecpipeline {
         stage('Deploy') {
             steps {
                 // Your deployment steps go here
-                docker_check.sh
+                sh ./docker_check.sh
                 }
          }
     }
