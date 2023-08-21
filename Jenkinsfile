@@ -27,9 +27,11 @@ pipeline {
     }
         stage('Deploy') {
             steps {
-                // Your deployment steps go here
-                sh ./docker_check.sh
+                script {
+                    // Your deployment steps go here
+                    sh ./docker_check.sh
                 }
          }
     }
+}
 }
