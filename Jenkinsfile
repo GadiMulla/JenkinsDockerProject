@@ -23,7 +23,7 @@ pipeline {
                 // Your testing steps go here
                 sh 'echo "Running Docker Container"'
                 def containerId = sh(script: "docker run -d --name $dockerjenkinsproject $dockerjenkinsproject"
-                sleep 20
+                sleep (20)
             }
         }
         
