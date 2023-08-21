@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo "Building the project"'
-                    def dockerjenkinsproject = "dockerjenkinsproject"
+                    def Dockerfile = "dockerjenkinsproject"
                         sh "docker build -t $dockerjenkinsproject ."
             }
         }
