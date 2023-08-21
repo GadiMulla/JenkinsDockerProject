@@ -25,11 +25,10 @@ pipeline {
             }
         }
     }
-        stage('Deploy') {
+        stage('Delete Container') {
             steps {
                 script {
-                    // Your deployment steps go here
-                    sh docker_check.sh
+                    sh ./docker_check.sh
                 }
              }
         }
