@@ -1,3 +1,3 @@
 FROM ubuntu:latest
-RUN chmod +x /docker_test.sh
-CMD ["/docker_test.sh"]
+RUN chmod +x /docker_sleep.sh
+CMD ["/docker_sleep.sh"]
