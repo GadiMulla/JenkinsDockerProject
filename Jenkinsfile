@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo "Running Docker Container"'
-                    def containerId = sh(script: "docker run -d --name $dockerjenkinsproject $dockerjenkinsproject")
+                    sh "docker run -d --name $dockerjenkinsproject $dockerjenkinsproject")
                     sleep (20)
             }
         }
