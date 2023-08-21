@@ -29,6 +29,7 @@ pipeline {
             steps {
                 // Your deployment steps go here
                 sh 'echo "Deploying"'
+                }
             }
         }
     }
