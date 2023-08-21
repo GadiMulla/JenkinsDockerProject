@@ -21,7 +21,10 @@ pipeline {
                 script {
                     sh 'echo "Running Docker Container"'
                     sh "docker run -d --name dockerjenkinsproject dockerjenkinsproject"
-                    sh './docker_sleep.sh'
+                    sh '''
+                    chmod 777 docker_sleep.sh
+                    ./docker_sleep.sh
+                    '''
             }
         }
     }
