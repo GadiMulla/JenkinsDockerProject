@@ -1,4 +1,4 @@
-pipeline {
+ecpipeline {
     agent any
 
     stages {
@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Your deployment steps go here
-                sh 'echo "Deploying"'
+                docker_check.sh
                 }
          }
     }
