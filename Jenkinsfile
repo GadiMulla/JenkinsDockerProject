@@ -28,7 +28,10 @@ pipeline {
         stage('Delete Container') {
             steps {
                 script {
-                    sh ./docker_check.sh
+                    sh '''
+                    chmod 777 docker_check.sh
+                    ./docker_check.sh
+                    '''
                 }
              }
         }
